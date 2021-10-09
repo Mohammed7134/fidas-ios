@@ -14,7 +14,7 @@ struct MainView: View {
             MenuViewComponent() {
                 VStack(spacing: 40){
                     Image(IMAGE_LOGO).resizable().aspectRatio(contentMode: .fill).frame(width: 250, height: 250)
-//                    HStack{
+                    HStack{
 //                        Spacer()
 //                        ButtonInMain(systemName: "person.3.fill", label: "Follow-up", active: $session.showFollowUpView) {
 //                            PatientListViews().environmentObject(session)
@@ -31,14 +31,14 @@ struct MainView: View {
                         ButtonInMain(systemName: "location.fill", label: "Find Medicine", active: $session.showFindMedicineView) {SearchLocationView(hospital: session.userSession!.hospEnum)
                         }
                         
-                        Spacer()
+//                        Spacer()
 //                        ButtonInMain(systemName: "lightbulb", label: "Information", active: $session.showInfoView) {
 //                            Text("Coming soon").environmentObject(session)
-//                        }
+                        }
                         
-//                        Spacer()
+                        Spacer()
 //                    }
-                }
+                }.frame(width: UIScreen.main.bounds.width)
                 .navigationBarColor()
                 .navigationBarTitle("Home", displayMode: .large)
             }
